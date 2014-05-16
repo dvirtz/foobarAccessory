@@ -1,0 +1,238 @@
+﻿<!--
+foobarAccessory.html
+(c) 2007 Chris Mrazek
+
+foobar is a registered trademark of Apple Computer Inc.
+-->
+<html>
+	<head>
+		<title>foobarRemote</title>
+		<link rel="Stylesheet" href="css\\Styles.css" />
+		<script type="text/javascript" src="js\\Constants.js"></script>
+		<script type="text/javascript" src="js\\Globals.js"></script>
+		<script type="text/javascript" src="js\\Utils.js"></script>
+		<script type="text/javascript" src="js\\foobarAccessory.js"></script>
+		<script type="text/javascript" src="js\\Theme.js"></script>
+		<script type="text/javascript" src="js\\Menu.js"></script>
+		<script type="text/javascript" src="js\\StyleDef.js"></script>
+		<script type="text/javascript" src="js\\Artwork.js"></script>
+        <script type="text/javascript" src="js\\AlbumArtGoogle.js"></script>
+	</head>
+	<body
+		onload="OnBodyLoad();"
+		onmousewheel="Body_MouseWheel();"
+		>
+	
+		<div id="backgroundContainer"></div>
+		
+		<div id="divTitleContainer"
+			style="position: absolute; left: 5px; top: 5px; width: 120px; height: 14px;"
+			>
+			<div id="divTitle"
+				onclick="TitleClick();"
+				onmouseout="TitleMouseOut();"
+				></div>
+		</div>
+		<input type="text" id="editTitle"
+			class="textEdit"
+			onkeydown="EditFieldKeyDown(editTitle);"
+			onblur="ExitEditField(editTitle,false);"
+			/>
+		<div id="divArtistContainer"
+			style="position: absolute; left: 5px; top: 18px; width: 120px; height: 14px;"
+			>
+			<div id="divArtist"
+				onclick="ArtistClick();"
+				onmouseout="ArtistMouseOut();"
+				></div>
+		</div>
+		<input type="text" id="editArtist"
+			class="textEdit"
+			onkeydown="EditFieldKeyDown(editArtist);"
+			onblur="ExitEditField(editArtist,false);"
+			/>
+		<div id="divAlbumContainer"
+			style="position: absolute; left: 5px; top: 31px; width: 120px; height: 14px;"
+			>
+			<div id="divAlbum"
+				onclick="AlbumClick();"
+				onmouseout="AlbumMouseOut();"
+				></div>
+		</div>
+		<input type="text" id="editAlbum"
+			class="textEdit"
+			onkeydown="EditFieldKeyDown(editAlbum);"
+			onblur="ExitEditField(editAlbum,false);"
+			/>
+		<img id="rating0"
+			src=""
+			style="position: absolute; top: 0px; left: 0px; width: 12px; height: 12px;"
+			alt=""
+			onclick="SetRating(0);"
+			onmouseover="OnRatingMouseOver(0,true);"
+			onmouseout="OnRatingMouseOver(0,false);"
+			/>
+		<img id="rating1"
+			src=""
+			style="position: absolute; top: 0px; left: 12px; width: 12px; height: 12px;"
+			alt=""
+			onclick="SetRating(20);"
+			onmouseover="OnRatingMouseOver(20,true);"
+			onmouseout="OnRatingMouseOver(20,false);"
+			/>
+		<img id="rating2"
+			src=""
+			style="position: absolute; top: 0px; left: 24px; width: 12px; height: 12px;"
+			alt="" 
+			onclick="SetRating(40);"
+			onmouseover="OnRatingMouseOver(40,true);"
+			onmouseout="OnRatingMouseOver(40,false);"
+			/>
+		<img id="rating3"
+			src=""
+			style="position: absolute; top: 0px; left: 36px; width: 12px; height: 12px;"
+			alt=""
+			onclick="SetRating(60);"
+			onmouseover="OnRatingMouseOver(60,true);"
+			onmouseout="OnRatingMouseOver(60,false);"
+			/>
+		<img id="rating4"
+			src=""
+			style="position: absolute; top: 0px; left: 48px; width: 12px; height: 12px;"
+			alt=""
+			onclick="SetRating(80);"
+			onmouseover="OnRatingMouseOver(80,true);"
+			onmouseout="OnRatingMouseOver(80,false);"
+			/>
+		<img id="rating5"
+			src=""
+			style="position: absolute; top: 0px; left: 60px; width: 12px; height: 12px;"
+			alt=""
+			onclick="SetRating(100);"
+			onmouseover="OnRatingMouseOver(100,true);"
+			onmouseout="OnRatingMouseOver(100,false);"
+			/>
+		<div id="artworkFrame" style="position: absolute; text-align: center; vertical-align: middle; overflow: hidden;">
+			<img id="artwork"
+				src=""
+				alt="Artwork"
+				ondragenter="event.returnValue = false;"
+				ondragover="event.returnValue = false;"
+				ondrop="OnDropArtwork();"
+				onclick="ArtworkClick();"
+				/>
+		</div>
+		<img id="timerBack"
+			src=""
+			style="position: absolute; left: 15px; top: 160px; width: 100px; height: 10px;"
+			alt=""
+			onclick="TimerClick();"
+			/>
+		<img id="timerFront"
+			src=""
+			style="position: absolute; left: 15px; top: 160px; width: 100px; height: 10px;"
+			alt=""
+			onclick="TimerClick();"
+			/>
+		<span id="timePassed"
+			class="timer"
+			title="Time Passed"
+			style="position: absolute; left: 6px; top: 172px; width: 30px; height: 12px; text-align: left;"
+			></span>
+		<span id="timeRemain"
+			class="timer"
+			title="Time Remaining"
+			style="position: absolute; left: 95px; top: 172px; width: 30px; height: 12px; text-align: right;"
+			></span>
+		<img id="prevButton"
+			src=""
+			style="position: absolute; left: 34px; top: 177px;"
+			alt="Previous Track"
+			onclick="PrevTrack();"
+			onmouseover="OnPrevMouseOver(true);"
+			onmouseout="OnPrevMouseOver(false);"
+			/>
+		<img id="playButton"
+			src=""
+			style="position: absolute; left: 55px; top: 175px;"
+			alt="Play/Pause"
+			onclick="PlayPause();"
+			onmouseover="OnPlayMouseOver(true);"
+			onmouseout="OnPlayMouseOver(false);"
+			/>
+		<img id="nextButton"
+			src=""
+			style="position: absolute; left: 76px; top: 177px;"
+			alt="Next Track"
+			onclick="NextTrack();"
+			onmouseover="OnNextMouseOver(true);"
+			onmouseout="OnNextMouseOver(false);"
+			/>
+		<img id="menuButton"
+			src=""
+			alt="Menu"
+			style="position: absolute; left: 6px; top: 185px; width: 10px; height: 10px;"
+			onclick="ShowMainMenu();"
+			onmouseover="MenuButton_MouseOver(true);"
+			onmouseout="MenuButton_MouseOver(false);"
+			/>
+		<img id="muteButton"
+			src=""
+			alt="Mute"
+			style="position: absolute; left: 103px; top: 185px; width: 10px; height: 10px;"
+			onclick="MuteClick();"
+			onmouseover="OnMuteMouseOver(true);"
+			onmouseout="OnMuteMouseOver(false);"
+			/>
+		<img id="volumeButton"
+			src=""
+			alt="Volume"
+			style="position: absolute; left: 115px; top: 185px; width: 10px; height: 10px;"
+			onclick="VolumeClick();"
+			onmouseover="OnVolumeMouseOver(true);"
+			onmouseout="OnVolumeMouseOver(false);"
+			/>
+		<img id="volumeBack"
+			class="volumeBack"
+			style="position: absolute; left: 115px; top: 135px; visibility: hidden;"
+			onclick="VolumeSliderClick();"
+			src=""
+			/>
+		<img id="volumeFront"
+			class="volumeFront"
+			style="position: absolute; left: 0px; top: 0px; visibility: hidden;"
+			onclick="VolumeSliderClick();"
+			src=""
+			/>
+		</div>
+		<div id="menuDiv"
+			class="menu"
+			onkeydown="Menu_KeyDown();"
+			onmousewheel="Menu_MouseWheel();"
+			onmousemove="OnMenuMouseMove();"
+			>
+			<div id="menuContent"
+				class="menuContent"
+				style="position: absolute; left: 0; top: 16;"
+				></div>
+			<div id="menuHeader"
+				class="menuHeader"
+				style="position: absolute; left: 0; top: 0; width: 119; height: 12;"
+				>
+				<span id="menuHeaderText"
+					style="white-space: nowrap;"
+					>
+					Title
+				</span>
+				<img id="menuCloseButton"
+					src=""
+					alt="Close Menu"
+					style="position: absolute; left: 106px; top: 3px; width: 10px; height: 10px;"
+					onclick="CloseMenu();"
+					onmouseover="MenuCloseButton_MouseOver(true);"
+					onmouseout="MenuCloseButton_MouseOver(false);"
+					/>
+			</div>
+		</div>
+	</body>
+</html>

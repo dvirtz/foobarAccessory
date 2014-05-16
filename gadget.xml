@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<gadget>
+    <name>foobarAccessory</name>
+    <namespace>foobarAccessory</namespace>
+    <version>1.0</version>
+    <author name="Dvir Yitzchaki">
+    </author>
+    <icons>
+	    <icon src="Images\logo.png" />
+    </icons>
+    <copyright>&#169; 2011</copyright>
+    <description>
+Control foobar2000 from the Sidebar
+
+Based on the itunesAccessory gadget by Chris Mrazek</description>
+    <hosts>
+        <host name="sidebar">
+            <base type="HTML" apiVersion="1.0.0" src="foobarAccessory.html" />
+            <permissions>full</permissions>
+            <platform minPlatformVersion="1.0" />
+        </host>
+    </hosts>
+</gadget>

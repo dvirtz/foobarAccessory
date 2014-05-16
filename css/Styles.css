@@ -1,0 +1,114 @@
+﻿/*
+Styles.css
+(c) 2007 Chris Mrazek
+*/
+
+body
+{
+	width: 130px;
+	height: 200px;
+	background: url("Images/Nothing.png");
+	margin: 0;
+}
+
+div#divTitleContainer
+{
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+div#divTitle
+{
+	filter: progid:DXImageTransform.Microsoft.Fade(duration=0.2000);
+}
+
+div#divArtistContainer
+{
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+div#divArtist
+{
+	filter: progid:DXImageTransform.Microsoft.Fade(duration=0.2000);
+}
+
+div#divAlbumContainer
+{
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+div#divAlbum
+{
+	filter: progid:DXImageTransform.Microsoft.Fade(duration=0.2000);
+}
+
+img#artwork
+{
+	filter: progid:DXImageTransform.Microsoft.Fade(duration=0.2000);
+	-ms-interpolation-mode: bicubic;
+}
+
+.timer
+{ 
+}
+
+
+.menu
+{
+	margin: 0;
+	overflow: hidden;
+	position: absolute;
+	visibility: hidden;
+}
+
+.menuHeader
+{
+	width: 100%;
+}
+
+.menuContent
+{
+	margin: 0px 2px 0px 0px;
+}
+
+.menuSeparator
+{
+	width: 120px;
+	height: 10px;
+	margin-left: 2px;
+	vertical-align: middle;
+}
+
+.menuItem
+{
+	margin-left: 2px;
+	white-space: nowrap;
+}
+
+.menuItemSelect
+{
+	margin-left: 2px;
+	white-space: nowrap;
+}
+
+.menuItemOver
+{
+	margin-left: 2px;
+	white-space: nowrap;
+}
+
+.textEdit
+{
+	margin: 0;
+	position: absolute;
+	visibility: hidden;
+}
+
+.rating
+{
+	font-family: Wingdings;
+	font-size: 10pt;
+	font-weight: normal;
+}

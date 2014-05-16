@@ -1,0 +1,35 @@
+<!--
+Settings.html
+(c) 2007 Chris Mrazek
+-->
+
+<html>
+	<head>
+		<style type="text/css">
+			body
+			{
+				width: 300;
+				height: 200;
+			}
+		</style>
+		<script type="text/javascript" src="js\\Constants.js"></script>
+		<script type="text/javascript" src="js\\Utils.js"></script>
+		<script type="text/javascript" language="javascript" src="js\\Settings.js"></script>
+	</head>
+	<body onload="Init();">
+		<span style="width: 100px;">Theme:</span>
+		<select id="selTheme" style="width: 150px;" onchange="selTheme_Change();"></select><br />
+		<div style="height: 4px; overflow: hidden;"></div>
+		<span style="width: 100px;">Docked Layout:</span>
+		<select id="selLayoutDocked" style="width: 150px;"></select>
+		<div style="height: 4px; overflow: hidden;"></div>
+		<span style="width: 100px;">Undocked Layout:</span>
+		<select id="selLayoutUndocked" style="width: 150px;"></select>
+		<div style="height: 10px; overflow: hidden;"></div>
+		<span style="width: 10px;">&nbsp;</span><input type="checkbox" id="chkDownloadArtworkOnClick" /> Download artwork when image clicked<br />
+		<span style="width: 20px;">&nbsp;</span><input type="checkbox" id="chkClickArtworkReplaces" /> Only if artwork is not already present<br />
+		<span style="width: 10px;">&nbsp;</span><input type="checkbox" id="chkAutoArtworkDownload" /> Automatically download artwork if missing<br />
+		<br />
+		<span style="width: 10px;">&nbsp;</span><input type="checkbox" id="chkScrollTitles" /> Scroll title, artist and album<br />
+	</body>
+</html>

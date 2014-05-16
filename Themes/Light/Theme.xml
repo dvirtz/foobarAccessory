@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<theme author="Chris Mrazek" info="Default theme.">
+	<layouts>
+		<layout name="Normal" width="130" height="213" default="true" defaultDocked="true">
+			<script>
+				var top = 2;
+				var left = 5;
+				var right = 125;
+				var middle = Math.floor((right - left) * .5) + left;
+				var width = right - left;
+			</script>
+			<control id="title" left="left" top="top" width="width" height="12"/>
+			<control id="artist" left="left" top="lastBottom" width="width" height="12"/>
+			<control id="album" left="left" top="lastBottom" width="width" height="12"/>
+
+			<control id="rating0" left="middle-(12+12+12+6)" top="lastBottom+2" width="12" height="12"/>
+			<control id="rating1" left="lastRight" top="lastTop" width="12" height="12"/>
+			<control id="rating2" left="lastRight" top="lastTop" width="12" height="12"/>
+			<control id="rating3" left="lastRight" top="lastTop" width="12" height="12"/>
+			<control id="rating4" left="lastRight" top="lastTop" width="12" height="12"/>
+			<control id="rating5" left="lastRight" top="lastTop" width="12" height="12"/>
+
+			<control id="artwork" left="5" top="lastBottom+2" width="120" height="120" image="NoArtwork120.png"/>
+
+			<control id="timePassed" left="5" top="lastBottom+2" width="25" height="10"/>
+			<control id="timeRemain" left="100" top="lastTop" width="25" height="10"/>
+			<control id="timeSlider" left="30" top="lastTop" width="width-50" height="10"/>
+
+			<control id="play" left="55" top="lastBottom+2" width="20" height="20"/>
+			<control id="prev" left="lastLeft-20" top="lastTop+3" width="20" height="14"/>
+			<control id="next" left="lastRight+20" top="lastTop" width="20" height="14"/>
+			<control id="menu" left="5" top="lastBottom-6" width="10" height="10"/>
+			<control id="mute" left="103" top="lastTop" width="10" height="10"/>
+			<control id="volume" left="115" top="lastTop" width="10" height="10"/>
+			<control id="volumeSlider" left="115" top="lastTop-50" width="10" height="50"/>
+
+			<control id="menuDialog" left="left" top="top" width="width" height="lastBottom+10"/>
+		</layout>
+		<layout name="No Artwork" width="130" height="93">
+			<script>
+				var top = 2;
+				var left = 5;
+				var right = 125;
+				var middle = Math.floor((right - left) * .5) + left;
+				var width = right - left;
+			</script>
+			<control id="title" left="left" top="top" width="width" height="12"/>
+			<control id="artist" left="left" top="lastBottom" width="width" height="12"/>
+			<control id="album" left="left" top="lastBottom" width="width" height="12"/>
+
+			<control id="rating0" left="middle-(12+12+12+6)" top="lastBottom+2" width="12" height="12"/>
+			<control id="rating1" left="lastRight" top="lastTop" width="12" height="12"/>
+			<control id="rating2" left="lastRight" top="lastTop" width="12" height="12"/>
+			<control id="rating3" left="lastRight" top="lastTop" width="12" height="12"/>
+			<control id="rating4" left="lastRight" top="lastTop" width="12" height="12"/>
+			<control id="rating5" left="lastRight" top="lastTop" width="12" height="12"/>
+
+			<control id="timePassed" left="5" top="lastBottom+2" width="25" height="10"/>
+			<control id="timeRemain" left="100" top="lastTop" width="25" height="10"/>
+			<control id="timeSlider" left="30" top="lastTop" width="width-50" height="10"/>
+
+			<control id="play" left="55" top="lastBottom+4" width="20" height="20"/>
+			<control id="prev" left="lastLeft-20" top="lastTop+3" width="20" height="14"/>
+			<control id="next" left="lastRight+20" top="lastTop" width="20" height="14"/>
+			<control id="menu" left="5" top="lastBottom-6" width="10" height="10"/>
+			<control id="mute" left="103" top="lastTop" width="10" height="10"/>
+			<control id="volume" left="115" top="lastTop" width="10" height="10"/>
+			<control id="volumeSlider" left="115" top="lastTop-50" width="10" height="50"/>
+
+			<control id="menuDialog" left="left" top="top" width="width" height="lastBottom+10-top"/>
+		</layout>
+		<layout name="Wide" width="280" height="100" allowDocked="false" defaultUndocked="true">
+			<script>
+				var left = 99, right = 275, top = 5, width = right - left;
+				var middle = Math.floor((right - left) * .5) + left;
+			</script>
+			<control id="artwork" left="5" top="5" width="90" height="90"  image="NoArtwork90.png"/>
+			<control id="title" left="left" top="top" width="width" height="14"/>
+			<control id="artist" left="left" top="lastBottom" width="width" height="14"/>
+			<control id="album" left="left" top="lastBottom" width="width" height="14"/>
+
+			<control id="rating0" left="middle-(12+12+12+6)" top="lastBottom" width="12" height="12"/>
+			<control id="rating1" left="lastRight" top="lastTop" width="12" height="12"/>
+			<control id="rating2" left="lastRight" top="lastTop" width="12" height="12"/>
+			<control id="rating3" left="lastRight" top="lastTop" width="12" height="12"/>
+			<control id="rating4" left="lastRight" top="lastTop" width="12" height="12"/>
+			<control id="rating5" left="lastRight" top="lastTop" width="12" height="12"/>
+
+			<control id="timePassed" left="left" top="lastBottom+3" width="25" height="10"/>
+			<control id="timeRemain" left="right-25" top="lastTop" width="25" height="10"/>
+			<control id="timeSlider" left="left+25" top="lastTop" width="width-50" height="10"/>
+
+			<control id="play" left="middle-10" top="lastBottom+3" width="20" height="20"/>
+			<control id="prev" left="lastLeft-20" top="lastTop+3" width="20" height="14"/>
+			<control id="next" left="lastRight+20" top="lastTop" width="20" height="14"/>
+
+			<control id="menu" left="left" top="lastBottom+3-10" width="10" height="10"/>
+			<control id="mute" left="right-22" top="lastTop" width="10" heigh="10"/>
+			<control id="volume" left="lastRight+2" top="lastTop" width="10" height="10"/>
+			<control id="volumeSlider" left="lastLeft" top="lastTop-50" width="10" height="50"/>
+
+			<control id="menuDialog" left="left" top="top" width="width" height="lastBottom+10-top"/>
+		</layout>
+		<layout name="Bare Bones" width="130" height="66">
+			<script>
+				var left = 5, right = 125, top = 3, width = right - left;
+				var middle = Math.floor((right - left) * .5) + left;
+			</script>
+			<control id="title" left="left" top="top" width="width" height="12"/>
+			<control id="artist" left="left" top="lastBottom" width="width" height="12"/>
+			<control id="album" left="left" top="lastBottom" width="width" height="12"/>
+
+			<control id="play" left="middle-10" top="lastBottom+3" width="20" height="20"/>
+			<control id="prev" left="lastLeft-20" top="lastTop+3" width="20" height="14"/>
+			<control id="next" left="lastRight+20" top="lastTop" width="20" height="14"/>
+
+			<control id="menu" left="left" top="lastBottom+3-10" width="10" height="10"/>
+			<control id="mute" left="right-22" top="lastTop" width="10" heigh="10"/>
+			<control id="volume" left="lastRight+2" top="lastTop" width="10" height="10"/>
+			<control id="volumeSlider" left="lastLeft" top="lastTop-50" width="10" height="50"/>
+
+			<control id="menuDialog" left="left" top="top" width="width" height="120"/>
+		</layout>
+		<layout name="Super-Thin" width="220" height="18" allowDocked="false">
+			<script>
+				var left = 3, top = 3;
+			</script>
+			<control id="menu" left="left" top="top" width="10" height="10"/>
+
+			<control id="timePassed" left="lastRight+5" top="top" width="25" height="10"/>
+			<control id="timeSlider" left="lastRight" top="top" width="75" height="10"/>
+			<control id="timeRemain" left="lastRight" top="top" width="25" height="10"/>
+
+			<control id="prev" left="lastRight+6" top="top" width="16" height="12"/>
+			<control id="play" left="lastLeft+14" top="top" width="12" height="12"/>
+			<control id="next" left="lastLeft+10" top="top" width="16" height="12"/>
+
+			<control id="mute" left="lastRight+4" top="top" width="10" height="10"/>
+			<control id="volume" left="lastRight+2" top="top" width="10" height="10"/>
+			<control id="volumeSlider" left="lastLeft-50" top="top" width="50" height="10"/>
+
+			<control id="menuDialog" left="left" top="top" width="220-6" height="120"/>
+		</layout>
+	</layouts>
+	<background>
+		<img left="0" top="0" width="4" height="4" src="BackgroundTopLeft.png"/>
+		<img left="4" top="0" width="gadgetWidth-8" height="4" src="BackgroundTop.png"/>
+		<img left="gadgetWidth-4" top="0" width="4" height="4" src="BackgroundTopRight.png"/>
+		<img left="0" top="4" width="4" height="gadgetHeight-8" src="BackgroundLeft.png"/>
+		<img left="4" top="4" width="gadgetWidth-8" height="gadgetHeight-8" src="BackgroundCenter.png"/>
+		<img left="gadgetWidth-4" top="4" width="4" height="gadgetHeight-8" src="BackgroundRight.png"/>
+		<img left="0" top="gadgetHeight-4" width="4" height="4" src="BackgroundBottomLeft.png"/>
+		<img left="4" top="gadgetHeight-4" width="gadgetWidth-8" height="4" src="BackgroundBottom.png"/>
+		<img left="gadgetWidth-4" top="gadgetHeight-4" width="4" height="4" src="BackgroundBottomRight.png"/>
+	</background>
+	<styles>
+		<style id="title" color="#000000" fontFamily="Tahoma" fontSize="8pt" fontWeight="bold"/>
+		<style id="artist" color="#000000" fontFamily="Tahoma" fontSize="8pt" fontWeight="normal"/>
+		<style id="album" color="#000000" fontFamily="Tahoma" fontSize="8pt" fontWeight="normal"/>
+		<style id="timePassed" color="#000000" fontFamily="Tahoma" fontSize="6.5pt" fontWeight="normal"/>
+		<style id="timeRemain" color="#000000" fontFamily="Tahoma" fontSize="6.5pt" fontWeight="normal"/>
+		<style id="titleEdit" color="#000000" fontFamily="Tahoma" fontSize="7pt" backgroundColor="#eeeeee"
+					 borderColor="#000000" borderStyle="solid" borderWidth="1px"/>
+		<style id="artistEdit" color="#000000" fontFamily="Tahoma" fontSize="7pt" backgroundColor="#eeeeee"
+					 borderColor="#000000" borderStyle="solid" borderWidth="1px" />
+		<style id="albumEdit" color="#000000" fontFamily="Tahoma" fontSize="7pt" backgroundColor="#eeeeee"
+					 borderColor="#000000" borderStyle="solid" borderWidth="1px" />
+		<style id="menuHeader" color="#000000" fontFamily="Tahoma" fontSize="10pt" fontWeight="bold"/>
+		<style id="menuItem" color="#000000" fontFamily="Tahoma" fontSize="8pt"/>
+		<style id="menuItemSelected" color="#000000" fontFamily="Tahoma" fontSize="8pt"
+					 filter="progid:DXImageTransform.Microsoft.glow(strength=1, color=#44ff44);"/>
+		<style id="menuItemHover" color="#000000" fontFamily="Tahoma" fontSize="8pt"
+					 filter="progid:DXImageTransform.Microsoft.glow(strength=1, color=#4444ff);"/>
+		<style id="menuBackground" backgroundColor="#eeeeee"
+					 filter="progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#eeeeee,endColorStr=#aaaaaa)"/>
+		<style id="menuHeaderBackground" backgroundColor="#eeeeee"
+					 filter="progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#eeeeee,endColorStr=#aaaaaa)"/>
+	</styles>
+	<images
+		ratingNone="RatingNone.png"
+		ratingOff="RatingOff.png"
+		ratingOn="RatingOn.png"
+		ratingHover="RatingOver.png"
+		sliderHBack="SliderHBack.png"
+		sliderHFore="SliderHFore.png"
+		sliderVBack="SliderVBack.png"
+		sliderVFore="SliderVFore.png"
+		playInactive="PlayInactive.png"
+		playActive="PlayActive.png"
+		playActiveHover="PlayActiveHover.png"
+		pauseInactive="PauseInactive.png"
+		pauseActive="PauseActive.png"
+		pauseActiveHover="PauseActiveHover.png"
+		nextInactive="NextInactive.png"
+		nextActive="NextActive.png"
+		nextActiveHover="NextActiveHover.png"
+		prevInactive="PrevInactive.png"
+		prevActive="PrevActive.png"
+		prevActiveHover="PrevActiveHover.png"
+		menuActive="Menu.png"
+		menuActiveHover="MenuOver.png"
+		muteInactive="MuteDisabled.png"
+		muteOffActive="Mute.png"
+		muteOffActiveHover="MuteOver.png"
+		muteOnActive="MuteOn.png"
+		muteOnActiveHover="MuteOnOver.png"
+		volumeInactive="VolumeDisabled.png"
+		volumeActive="Volume.png"
+		volumeActiveHover="VolumeOver.png"
+		menuCloseActive="MenuClose.png"
+		menuCloseActiveHover="MenuCloseOver.png"
+		menuSeparator="MenuSeparator.png"
+		/>
+</theme>
